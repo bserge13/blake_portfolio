@@ -27,6 +27,11 @@ RSpec.describe 'Home', type: :feature do
 
       expect(current_path).to eq(resume_index_path)
       expect(page).to have_content("Welcome to my resume!")
+      expect(page).to have_button('Home')
+      expect(page).to have_button('Resume')
+      expect(page).to have_button('Contact Me')
+      expect(page).to have_button('My Story')
+
     end
 
     it 'redirects users to the contact page' do 
@@ -38,6 +43,11 @@ RSpec.describe 'Home', type: :feature do
 
       expect(current_path).to eq(contact_index_path)
       expect(page).to have_content("Welcome to my contact page!")
+      expect(page).to have_button('Home')
+      expect(page).to have_button('Resume')
+      expect(page).to have_button('Contact Me')
+      expect(page).to have_button('My Story')
+
     end
 
     it 'redirects users to the bio page' do 
@@ -49,6 +59,10 @@ RSpec.describe 'Home', type: :feature do
 
       expect(current_path).to eq(bio_index_path)
       expect(page).to have_content("Welcome to my bio page!")
+      expect(page).to have_button('Home')
+      expect(page).to have_button('Resume')
+      expect(page).to have_button('Contact Me')
+      expect(page).to have_button('My Story')
     end
   end
 end
