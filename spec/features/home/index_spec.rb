@@ -39,5 +39,16 @@ RSpec.describe 'Home', type: :feature do
       expect(current_path).to eq(contact_index_path)
       expect(page).to have_content("Welcome to my contact page!")
     end
+
+    it 'redirects users to the bio page' do 
+      visit root_path
+
+      within '#buttons' do 
+        click_button('My Story')
+      end
+
+      expect(current_path).to eq(bio_index_path)
+      expect(page).to have_content("Welcome to my bio page!")
+    end
   end
 end
