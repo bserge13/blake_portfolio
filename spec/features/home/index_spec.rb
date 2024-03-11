@@ -31,7 +31,6 @@ RSpec.describe 'Home', type: :feature do
       expect(page).to have_button('Resume')
       expect(page).to have_button('Contact Me')
       expect(page).to have_button('My Story')
-
     end
 
     it 'redirects users to the contact page' do 
@@ -47,7 +46,6 @@ RSpec.describe 'Home', type: :feature do
       expect(page).to have_button('Resume')
       expect(page).to have_button('Contact Me')
       expect(page).to have_button('My Story')
-
     end
 
     it 'redirects users to the bio page' do 
@@ -63,6 +61,7 @@ RSpec.describe 'Home', type: :feature do
       expect(page).to have_button('Resume')
       expect(page).to have_button('Contact Me')
       expect(page).to have_button('My Story')
+      save_and_open_page
     end
   end
 end
